@@ -11,7 +11,7 @@ For this exercise, "a", "e", "i", "o" and "u" are vowels - we will not count
 BONUS: Make the function count "A", "E", etc.  In other words, have this function
 handle all strings, regardless of case sensitivity.
 """
-
+vowels = {}
 
 """
 Factorial:

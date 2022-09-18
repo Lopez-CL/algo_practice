@@ -1,9 +1,13 @@
-Print 1-255
-print1To255()
-Print all the integers from 1 to 255. 
+// Print 1-255
+// print1To255()
+// Print all the integers from 1 to 255. 
 
-printOdds1To255()
-Print all odd integers from 1 to 255.
+// function print1To255(){
+//     for(var i = 1; i < 256; i++){
+//         console.log(i);
+//     }
+// }
+// console.log(print1To255());
 
 printIntsAndSum0To255()
 Print integers from 0 to 255, and with each integer print the sum so far. 
