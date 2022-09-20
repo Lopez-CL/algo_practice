@@ -1,9 +1,19 @@
 # Find minimum value of list:
 # Write a function that accepts a list as input and returns the smallest value
 # found.  If the list is empty, return None.
-# """
+'''
+def find_min(list):
+    min = 0
+    if list == []:
+        return "None"
+    for i in list:
+        if i < min:
+            min = i;
+    return min
 
-# """
+print(find_min([2,0,6, -1, 4, -8]))
+'''
+
 # Count vowels:
 # Write a function that accepts a string and returns the number of vowels found.
 # For this exercise, "a", "e", "i", "o" and "u" are vowels - we will not count
@@ -11,21 +21,22 @@
 # BONUS: Make the function count "A", "E", etc.  In other words, have this function
 # handle all strings, regardless of case sensitivity.
 
+'''
 # vowels = {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
 # vowel_count = 0
-def count_vowles(string):
-    vowels = {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
-    vowel_count = 0
-    lower_case = string.lower()
-    for character in lower_case:
-        for key,val in vowels.items():
-            if character == key:
-                val += 1
-                vowel_count += 1
-    return f"There are {vowel_count} vowels in {string}!"
+# def count_vowles(string):
+#     vowels = {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
+#     vowel_count = 0
+#     lower_case = string.lower()
+#     for character in lower_case:
+#         for key,val in vowels.items():
+#             if character == key:
+#                 val += 1
+#                 vowel_count += 1
+#     return f"There are {vowel_count} vowels in {string}!"
 
-print(count_vowles("Hello Bitch!"))
-
+# print(count_vowles("Hello Bitch!"))
+'''
 
 
 
@@ -39,6 +50,19 @@ print(count_vowles("Hello Bitch!"))
 # 1 * 2 * ... * n.  By definition, 0! = 1 and 1! = 1.  If the number
 # is negative, return 1.
 # """
+
+'''
+def factorials(num):
+    if num == 0:
+        return 1
+    for i in range(1,num):
+        num = num * i
+        print(num)
+    return num
+
+print(factorials(0))
+'''
+
 
 # """
 # Scrabble Score

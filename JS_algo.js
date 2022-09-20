@@ -2,19 +2,37 @@
 // print1To255()
 // Print all the integers from 1 to 255. 
 
-// function print1To255(){
-//     for(var i = 1; i < 256; i++){
-//         console.log(i);
-//     }
-// }
-// console.log(print1To255());
+/*
+function print1To255(){
+    for(var i = 1; i < 256; i++){
+        console.log(i);
+    }
+}
+console.log(print1To255());*/
 
 // printIntsAndSum0To255()
 // Print integers from 0 to 255, and with each integer print the sum so far. 
 
+function printIntsAndSum0To255(){
+    var sum = 0;
+    for (var i = 0; i < 256; i++){
+        sum = sum + i;
+        console.log(sum);
+    }
+    return sum;
+}
+console.log(printIntsAndSum0To255());
 
 // printArrayVals(arr)
 // Iterate through a given array, printing each value. 
+
+function printArrayVals(arr){
+    for (var i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+}
+
+console.log(printArrayVals([33,-4,88,0,89]));
 
 // printMaxOfArray(arr)
 // Given an array, find and print its largest element. 
