@@ -39,7 +39,6 @@ print(find_min([2,0,6, -1, 4, -8]))
 '''
 
 
-
 # Factorial:
 # In mathematics, n! (read "n factorial") is equal to 1 * 2 * 3 * ... * n.
 # For example:
@@ -51,7 +50,7 @@ print(find_min([2,0,6, -1, 4, -8]))
 # is negative, return 1.
 # """
 
-'''
+
 def factorials(num):
     if num == 0:
         return 1
@@ -61,7 +60,7 @@ def factorials(num):
     return num
 
 print(factorials(0))
-'''
+
 
 
 # """
@@ -83,6 +82,36 @@ print(factorials(0))
 # PHANTOM will return 14 (3 + 4 + 1 + 1 + 1 + 1 + 3).
 # """
 
+x = [
+    {"tile": "P", "score": 3},
+    {"tile": "H", "score": 4},
+    {"tile": "A", "score": 1},
+    {"tile": "N", "score": 1},
+    {"tile": "T", "score": 1},
+    {"tile": "O", "score": 1},
+    {"tile": "M", "score": 3},
+]
+y = [
+    {"tile": "N", "score": 1},
+    {"tile": "K", "score": 5},
+    {"tile": "Z", "score": 10},
+    {"tile": "X", "score": 8},
+    {"tile": "D", "score": 2},
+    {"tile": "A", "score": 1},
+    {"tile": "E", "score": 1}
+]
+
+
+def total_score(dictionary_ls):
+    score = 0
+    for dict in dictionary_ls:
+        # print(dict['score'])
+        score += dict['score']
+    return f"Your score is {score}!"
+
+
+# print(total_score(x))
+print(total_score(y))
 
 
 # """
@@ -90,10 +119,12 @@ print(factorials(0))
 # (Modified from this version from Edabit: https://edabit.com/challenge/nunJurLEibCyn8fzn)
 # Given a list containing strings and numbers, return a new list with all string values removed.
 # Keep the original order of the values the same.
-# Examples: 
+# Examples:
 # [3, 8, "hello", -4] should return [3, 8, -4]
 # ["money", "33", 4, "blue", 5] should return [4, 5] ("33" is a string, not a number)
 # """
+
+
 
 # """
 # Frequency distribution (from https://edabit.com/challenge/KKmM4ob5wwPwf8kgS):
