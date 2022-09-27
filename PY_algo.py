@@ -124,7 +124,14 @@ print(total_score(y))
 # ["money", "33", 4, "blue", 5] should return [4, 5] ("33" is a string, not a number)
 # """
 
-
+def remove_str(list):
+    new_list = []
+    for item in list:
+        if isinstance(item, int) == True:
+            new_list.append(item)
+    return new_list
+print(remove_str([3, 8, "hello", -4]))
+print(remove_str(["money", "33", 4, "blue", 5]))
 
 # """
 # Frequency distribution (from https://edabit.com/challenge/KKmM4ob5wwPwf8kgS):
