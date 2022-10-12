@@ -64,16 +64,59 @@ function printAverageOfArray(arr){
 console.log(printAverageOfArray([1,2,3,4,5,6,7,8]))
 
 // returnOddsArray1To255()
-// Create an array with all the odd integers between 1 and 255 (inclusive).  
+// Create an array with all the odd integers between 1 and 255 (inclusive).
+
+function returnOddsArray1To255(){
+    var odd_arr = []
+    for (var i = 1; i < 256; i++){
+        if(i % 2 != 0){
+            odd_arr.push(i);
+        }
+    }
+    return odd_arr;
+}
+console.log(returnOddsArray1To255());
 
 // squareArrayVals(arr)
 // Square each value in a given array, returning that same array with changed values. 
 
+function squareArrayVals(arr){
+    var newArr = [];
+    for(var i = 0; i < arr.length; i++){
+        newArr.push(arr[i]**2);
+    }
+    return newArr;
+}
+console.log(squareArrayVals([1,2,3,4]));
+
 // printArrayCountGreaterThanY(arr, y)
 // Given an array and a value Y, count and print the number of array values greater than Y. 
+function printArrayCountGreaterThanY(arr, y){
+    var count = 0;
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] > y){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(printArrayCountGreaterThanY([ 1, 4, 9, 16 ],2))
 
 // zeroOutArrayNegativeVals(arr)
-// Return the given array, after setting any negative values to zero. 
+// Return the given array, after setting any negative values to zero.
+
+function zeroOutArrayNegativeVals(arr){
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] < 0){
+            arr[i] = 0;
+        }
+    }
+    return arr;
+}
+
+console.log(zeroOutArrayNegativeVals([ 1, -4, -9, 16 ]))
+
 
 // printMaxMinAverageArrayVals(arr)
 // Given an array, print the max, min and average values for that array.

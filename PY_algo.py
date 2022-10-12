@@ -14,12 +14,12 @@ def find_min(list):
 print(find_min([2,0,6, -1, 4, -8]))
 '''
 
-# Count vowels:
-# Write a function that accepts a string and returns the number of vowels found.
-# For this exercise, "a", "e", "i", "o" and "u" are vowels - we will not count
-# "y" as a vowel.
-# BONUS: Make the function count "A", "E", etc.  In other words, have this function
-# handle all strings, regardless of case sensitivity.
+"""Count vowels:
+Write a function that accepts a string and returns the number of vowels found.
+For this exercise, "a", "e", "i", "o" and "u" are vowels - we will not count
+"y" as a vowel.
+BONUS: Make the function count "A", "E", etc.  In other words, have this function
+handle all strings, regardless of case sensitivity."""
 
 '''
 # vowels = {"a": 0, "e": 0, "i": 0, "o": 0, "u": 0}
@@ -133,17 +133,32 @@ def remove_str(list):
 print(remove_str([3, 8, "hello", -4]))
 print(remove_str(["money", "33", 4, "blue", 5]))
 
-# """
-# Frequency distribution (from https://edabit.com/challenge/KKmM4ob5wwPwf8kgS):
-# Given a list of items, return a dictionary that contains the frequency of each item.
-# Each key will be an entry from the list, and the value linked to the key will be
-# the number of occurrences of said key in the list.  If the list is empty, return
-# an empty dictionary.
-# Examples:
-# ["M", "P", "C", "C", "P"] returns { "M": 1, "P": 2, "C": 2} as there are 2 "P"s, 2 "C"s and 1 "M"
-# [1, 5, 8, 5, 5, 3] returns { 1: 1, 5: 3, 8: 1, 3: 1 } (Note it's okay that a key is a number or boolean)
-# [] returns {}
-# """
+"""
+Frequency distribution (from https://edabit.com/challenge/KKmM4ob5wwPwf8kgS):
+Given a list of items, return a dictionary that contains the frequency of each item.
+Each key will be an entry from the list, and the value linked to the key will be
+the number of occurrences of said key in the list.  If the list is empty, return
+an empty dictionary.
+Examples:
+["M", "P", "C", "C", "P"] returns { "M": 1, "P": 2, "C": 2} as there are 2 "P"s, 2 "C"s and 1 "M"
+[1, 5, 8, 5, 5, 3] returns { 1: 1, 5: 3, 8: 1, 3: 1 } (Note it's okay that a key is a number or boolean)
+[] returns {}
+"""
+
+# def frequency(list):
+#     now_dict = {}
+#     if list == []:
+#         return {}
+#     for item in list:
+#         freq = list.count(item)
+#         now_dict[item] = freq
+#     return now_dict
+
+# # print(frequency(["M", "P", "C", "C", "P"]))
+# # print(frequency([1, 5, 8, 5, 5, 3]))  
+# print(frequency([]))
+
+
 
 
 # """
