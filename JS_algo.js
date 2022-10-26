@@ -1,26 +1,43 @@
-/*My goal with these basic alogs is to practice not only JS but also practice function arrows. SO I will write function both ways as a way to practice*/
+/*My goal with these basic alogs is to practice not only JS but also practice function arrows and ES6. So, I will write function both ways as a way to practice*/
 // Print 1-255
 // print1To255()
 // Print all the integers from 1 to 255. 
 
-// function  print1To255(){
-//     for (var i = 1; i < 256; i++){
-//         console.log(i);
-//     }
-// }
+function print1To255() {
+    for (var i = 1; i < 256; i++) {
+        console.log(i);
+    }
+}
 console.log(print1To255());
-// Not much of a difference. But maybe it will change?
+// with arrow function  Not much of a difference. But maybe it will change?
 const print1To255 = () => {
-    for(var i = 1; i < 256; i++){
+    for (let i = 1; i < 256; i++) {
         console.log(i);
     }
 }
 console.log(print1To255())
 
 // printIntsAndSum0To255()
-// Print integers from 0 to 255, and with each integer print the sum so far. 
+// Print integers from 0 to 255, and with each integer print the sum so far.
+function printIntsAndSum0To255() {
+    var sumSoFar = 0;
+    for (var i = 0; i < 256; i++){
+        console.log(i);
+        sumSoFar = i + sumSoFar;
+        console.log(sumSoFar);
+    }
+}
+console.log(printIntsAndSum0To255());
 
-
+const printIntsAndSum0To255 = () => {
+    let sumSoFar = 0;
+    for (let i = 0; i < 256; i++){
+        console.log(i);
+        sumSoFar = i + sumSoFar;
+        console.log(sumSoFar);
+    }
+}
+console.log(printIntsAndSum0To255());
 // printArrayVals(arr)
 // Iterate through a given array, printing each value. 
 

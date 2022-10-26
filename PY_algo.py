@@ -2,6 +2,11 @@
 Write a function that accepts a list as input and returns the smallest value
 found.  If the list is empty, return None."""
 
+def find_min(arr):
+    minimum = min(arr)
+    return minimum
+print(find_min([1,-2,4,-9]))
+
 
 """Count vowels:
 Write a function that accepts a string and returns the number of vowels found.
