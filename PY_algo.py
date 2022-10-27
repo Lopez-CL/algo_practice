@@ -15,6 +15,19 @@ For this exercise, "a", "e", "i", "o" and "u" are vowels - we will not count
 BONUS: Make the function count "A", "E", etc.  In other words, have this function
 handle all strings, regardless of case sensitivity."""
 
+vowel_list = ['a','e','i','o','u']
+def vowel_count(str):
+    lower_str = str.lower()
+    count = 0
+    for letter in lower_str:
+        for vowel in vowel_list:
+            if letter == vowel:
+                count += 1 
+                print(count)
+    return f"There are {count} vowels in {str}!"
+
+print(vowel_count("Oscar Issac, I will write you an IOU!"))
+
 
 """Factorial:
 In mathematics, n! (read "n factorial") is equal to 1 * 2 * 3 * ... * n.
