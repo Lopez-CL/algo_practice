@@ -2,6 +2,11 @@
 Write a function that accepts a list as input and returns the smallest value
 found.  If the list is empty, return None."""
 
+from math import factorial
+
+from symbol import factor
+
+
 def find_min(arr):
     minimum = min(arr)
     return minimum
@@ -39,7 +44,16 @@ Write a function that takes an integer, n, as input and returns the product
 1 * 2 * ... * n.  By definition, 0! = 1 and 1! = 1.  If the number
 is negative, return 1."""
 
-
+def factorial_fun(n):
+    factorial = 1
+    if n < 0:
+        return factorial
+    else:
+        for i in range(n):
+            factorial = factorial * (i+1)
+            # print(factorial) used this to test
+        return factorial
+print(factorial_fun(4))
 
 
 """
