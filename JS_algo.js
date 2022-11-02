@@ -1,14 +1,21 @@
-/*My goal with these basic alogs is to practice not only JS but also practice function arrows and ES6. So, I will write function both ways as a way to practice*/
+/*My goal with these basic alogs is to practice not only JS but also practice some minor ES6.*/
+// something I will use to generate random arrays for the algo practice:
+
+const randomArray = (arr) => {
+    for (let i = 0; i < 11; i++) {
+        let num = Math.floor(Math.random() * 101);
+        console.log(num);
+        arr.push(num);
+    }
+    return arr;
+}
+console.log(randomArray([]));
+
+// START OF ALGOS!
+
 // Print 1-255
 // print1To255()
-// Print all the integers from 1 to 255. 
-
-function print1To255() {
-    for (var i = 1; i < 256; i++) {
-        console.log(i);
-    }
-}
-console.log(print1To255());
+// Print all the integers from 1 to 255.
 // with arrow function  Not much of a difference. But maybe it will change?
 const print1To255 = () => {
     for (let i = 1; i < 256; i++) {
@@ -19,15 +26,6 @@ console.log(print1To255())
 
 // printIntsAndSum0To255()
 // Print integers from 0 to 255, and with each integer print the sum so far.
-function printIntsAndSum0To255() {
-    var sumSoFar = 0;
-    for (var i = 0; i < 256; i++) {
-        console.log(i);
-        sumSoFar = i + sumSoFar;
-        console.log(sumSoFar);
-    }
-}
-console.log(printIntsAndSum0To255());
 
 const printIntsAndSum0To255 = () => {
     let sumSoFar = 0;
@@ -42,21 +40,28 @@ console.log(printIntsAndSum0To255());
 // printArrayVals(arr)
 // Iterate through a given array, printing each value. 
 
-function printArrayVals(arr) {
-    for (var i = 0; i < arr.length; i++) {
+const printArrayVals = arr => {
+    for (let i = 0; i < arr.length; i++) {
         console.log(arr[i])
     }
 }
 console.log(printArrayVals([1, -2, 4, -9]))
-
-const printArrayVals = arr => {
-        for (let i = 0; i < arr.length; i++){
-            console.log(arr[i])
-        }
-}
-console.log(printArrayVals([1, -2, 4, -9]))
 // printMaxOfArray(arr)
 // Given an array, find and print its largest element. 
+const printMaxOfArray = arr => {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+console.log(printMaxOfArray([
+    63, 20, 15, 64, 28,
+    10, 5, 6, 77, 95,
+    46]));
 
 
 // printAverageOfArray(arr)
