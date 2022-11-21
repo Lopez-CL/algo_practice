@@ -1,6 +1,6 @@
-/*My goal with these basic alogs is to practice not only JS but also practice some minor ES6.*/
-// something I will use to generate random arrays for the algo practice:
+/*My goal with these basic alogs is to practice not only JS but also practice some minor ES6 syntax. Additionally, I will try using the high order functions map and filter where useful.*/
 
+// something I will use to generate random arrays for the algo practice:
 const randomArray = (arr) => {
     for (let i = 0; i < 11; i++) {
         let num = Math.floor(Math.random() * 101);
@@ -41,19 +41,23 @@ console.log(printIntsAndSum0To255());
 // Iterate through a given array, printing each value. 
 
 const printArrayVals = arr => {
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i])
-    }
+    const newArr = arr.map((val)=>{
+        console.log(val)
+    })
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i])
+    // }
 }
-console.log(printArrayVals([1, -2, 4, -9]))
+console.log(printArrayVals([
+    57, 44,  6, 87, 79,
+    35, 49, 84, 29, 47,
+    64]));
 // printMaxOfArray(arr)
 // Given an array, find and print its largest element. 
 const printMaxOfArray = arr => {
     let max = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+        arr[i] > max? max = arr[i]:null
     }
     return max;
 }
@@ -66,6 +70,18 @@ console.log(printMaxOfArray([
 
 // printAverageOfArray(arr)
 // Analyze an array’s values and print the average. 
+
+const printAverageOfArray = (arr) =>{
+    let avg = 0;
+    const newArr = arr.map((value) => {
+        avg = value + avg
+    })
+    return Math.round(avg/arr.length);
+}
+console.log(printAverageOfArray([
+    57, 44,  6, 87, 79,
+    35, 49, 84, 29, 47,
+    64]))
 
 // returnOddsArray1To255()
 // Create an array with all the odd integers between 1 and 255 (inclusive).
