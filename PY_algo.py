@@ -74,6 +74,35 @@ x = [
 ]
 PHANTOM will return 14 (3 + 4 + 1 + 1 + 1 + 1 + 3).
 # """
+x = [
+    {"tile": "P", "score": 3},
+    {"tile": "H", "score": 4},
+    {"tile": "A", "score": 1},
+    {"tile": "N", "score": 1},
+    {"tile": "T", "score": 1},
+    {"tile": "O", "score": 1},
+    {"tile": "M", "score": 3},
+]
+y = [
+    {"tile": "W", "score": 1},
+    {"tile": "A", "score": 4},
+    {"tile": "K", "score": 2},
+    {"tile": "A", "score": 3},
+    {"tile": "N", "score": 5},
+    {"tile": "D", "score": 5},
+    {"tile": "A", "score": 2},
+]
+def scrable_score(var):
+    score = 0
+    word = ''
+    for letter in var:
+        score = letter['score'] + score
+        print(score)
+        word = word + letter['tile']
+    return f"the word {word} gets you {score} points!"
+print(scrable_score(x))
+print(scrable_score(y))
+
 
 
 

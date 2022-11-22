@@ -86,6 +86,15 @@ console.log(printAverageOfArray([
 // returnOddsArray1To255()
 // Create an array with all the odd integers between 1 and 255 (inclusive).
 
+const returnOddsArray1To255 = () =>{
+    let arr = [];
+    for(let i = 1; i < 256; i++){
+        i % 2 !== 0? arr.push(i):null
+    }
+    return arr
+}
+console.log(returnOddsArray1To255());
+
 // squareArrayVals(arr)
 // Square each value in a given array, returning that same array with changed values. 
 
