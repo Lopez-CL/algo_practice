@@ -41,7 +41,7 @@ console.log(printIntsAndSum0To255());
 // Iterate through a given array, printing each value. 
 
 const printArrayVals = arr => {
-    const newArr = arr.map((val)=>{
+    const newArr = arr.map((val) => {
         console.log(val)
     })
     // for (let i = 0; i < arr.length; i++) {
@@ -49,7 +49,7 @@ const printArrayVals = arr => {
     // }
 }
 console.log(printArrayVals([
-    57, 44,  6, 87, 79,
+    57, 44, 6, 87, 79,
     35, 49, 84, 29, 47,
     64]));
 // printMaxOfArray(arr)
@@ -57,7 +57,7 @@ console.log(printArrayVals([
 const printMaxOfArray = arr => {
     let max = 0;
     for (let i = 0; i < arr.length; i++) {
-        arr[i] > max? max = arr[i]:null
+        arr[i] > max ? max = arr[i] : null
     }
     return max;
 }
@@ -71,25 +71,25 @@ console.log(printMaxOfArray([
 // printAverageOfArray(arr)
 // Analyze an array’s values and print the average. 
 
-const printAverageOfArray = (arr) =>{
+const printAverageOfArray = (arr) => {
     let avg = 0;
     const newArr = arr.map((value) => {
         avg = value + avg
     })
-    return Math.round(avg/arr.length);
+    return Math.round(avg / arr.length);
 }
 console.log(printAverageOfArray([
-    57, 44,  6, 87, 79,
+    57, 44, 6, 87, 79,
     35, 49, 84, 29, 47,
     64]))
 
 // returnOddsArray1To255()
 // Create an array with all the odd integers between 1 and 255 (inclusive).
 
-const returnOddsArray1To255 = () =>{
+const returnOddsArray1To255 = () => {
     let arr = [];
-    for(let i = 1; i < 256; i++){
-        i % 2 !== 0? arr.push(i):null
+    for (let i = 1; i < 256; i++) {
+        i % 2 !== 0 ? arr.push(i) : null
     }
     return arr
 }
@@ -97,9 +97,28 @@ console.log(returnOddsArray1To255());
 
 // squareArrayVals(arr)
 // Square each value in a given array, returning that same array with changed values. 
+const squareArrayVals = (arr) => {
+    const newArr = arr.map((val) => (val * val));
+    return newArr;
+};
+console.log(squareArrayVals([
+    1, 2, 3, 4
+]))
 
 // printArrayCountGreaterThanY(arr, y)
-// Given an array and a value Y, count and print the number of array values greater than Y. 
+// Given an array and a value Y, count and print the number of array values greater than Y.
+const printArrayCountGreaterThanY = (arr, Y) => {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] > Y? count++ : null;
+    }
+    return count;
+}
+
+console.log(printArrayCountGreaterThanY([
+    26, 35, 20, 20, 89,
+    64, 58, 85, 24, 76,
+    86], 55))
 
 // zeroOutArrayNegativeVals(arr)
 // Return the given array, after setting any negative values to zero.

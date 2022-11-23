@@ -115,6 +115,14 @@ Examples:
 [3, 8, "hello", -4] should return [3, 8, -4]
 ["money", "33", 4, "blue", 5] should return [4, 5] ("33" is a string, not a number)
 """
+def rmv_str(arr):
+    new_arr = []
+    for item in arr:
+        if type(item) is int:
+            new_arr.append(item)
+    return new_arr
+print(rmv_str([3, 8, "hello", "44", -4]))
+print(rmv_str(["33","money", "yellow", 4, "blue", 5]))
 
 
 """
