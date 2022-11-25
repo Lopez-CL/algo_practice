@@ -110,7 +110,7 @@ console.log(squareArrayVals([
 const printArrayCountGreaterThanY = (arr, Y) => {
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
-        arr[i] > Y? count++ : null;
+        arr[i] > Y ? count++ : null;
     }
     return count;
 }
@@ -123,6 +123,15 @@ console.log(printArrayCountGreaterThanY([
 // zeroOutArrayNegativeVals(arr)
 // Return the given array, after setting any negative values to zero.
 
+const zeroOutArrayNegativeVals = (arr) => {
+    const newArr = arr.map((val)=>(val < 0 ? val = 0 : val))
+    return newArr;
+};
+
+console.log(zeroOutArrayNegativeVals([
+    44, -12, 7, -87, 19,
+    32, 26, -74, 10, -56,
+    45]))
 
 // printMaxMinAverageArrayVals(arr)
 // Given an array, print the max, min and average values for that array.
