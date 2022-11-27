@@ -2,7 +2,7 @@
 
 // something I will use to generate random arrays for the algo practice:
 const randomArray = (arr) => {
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 7; i++) {
         let num = Math.floor(Math.random() * 101);
         console.log(num);
         arr.push(num);
@@ -55,16 +55,13 @@ console.log(printArrayVals([
 // printMaxOfArray(arr)
 // Given an array, find and print its largest element. 
 const printMaxOfArray = arr => {
-    let max = 0;
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] > max ? max = arr[i] : null
-    }
+    const max = Math.max(...arr);
     return max;
 }
 
 console.log(printMaxOfArray([
     63, 20, 15, 64, 28,
-    10, 5, 6, 77, 95,
+    100, 5, 6, 77, 95,
     46]));
 
 
@@ -135,6 +132,18 @@ console.log(zeroOutArrayNegativeVals([
 
 // printMaxMinAverageArrayVals(arr)
 // Given an array, print the max, min and average values for that array.
+const printMaxMinAverageArrayVals = (arr) =>{
+    const max = Math.max(...arr)
+    const min = Math.min(...arr)
+    let sum = 0;
+    arr.forEach((item) =>{
+        sum = item + sum;
+    })
+    return `min ${min}, max: ${max}, avg: ${sum/arr.length}`
+}
+console.log(printMaxMinAverageArrayVals([
+    57, 99,  3, 92,
+    85, 87, 39]));
 
 // shiftArrayValsLeft(arr)
 // Given an array, move all values forward (to the left) by one index, dropping the first value and leaving a 0 (zero) value at the end of the array.
