@@ -121,7 +121,7 @@ console.log(printArrayCountGreaterThanY([
 // Return the given array, after setting any negative values to zero.
 
 const zeroOutArrayNegativeVals = (arr) => {
-    const newArr = arr.map((val)=>(val < 0 ? val = 0 : val))
+    const newArr = arr.map((val) => (val < 0 ? val = 0 : val))
     return newArr;
 };
 
@@ -132,23 +132,38 @@ console.log(zeroOutArrayNegativeVals([
 
 // printMaxMinAverageArrayVals(arr)
 // Given an array, print the max, min and average values for that array.
-const printMaxMinAverageArrayVals = (arr) =>{
+const printMaxMinAverageArrayVals = (arr) => {
     const max = Math.max(...arr)
     const min = Math.min(...arr)
     let sum = 0;
-    arr.forEach((item) =>{
+    arr.forEach((item) => {
         sum = item + sum;
     })
-    return `min ${min}, max: ${max}, avg: ${sum/arr.length}`
+    return `min ${min}, max: ${max}, avg: ${sum / arr.length}`
 }
 console.log(printMaxMinAverageArrayVals([
-    57, 99,  3, 92,
+    57, 99, 3, 92,
     85, 87, 39]));
 
 // shiftArrayValsLeft(arr)
 // Given an array, move all values forward (to the left) by one index, dropping the first value and leaving a 0 (zero) value at the end of the array.
+const shiftArrayValsLeft = (arr) => {
+    arr.shift();
+    arr.push(0);
+    return arr;
+}
+console.log(shiftArrayValsLeft([
+    77, 41, 70, 85,
+    22, -45, 80]))
 
 // swapStringForArrayNegativeVals(arr)
 // Given an array of numbers, replace any negative values with the string 'Dojo'
+const swapStringForArrayNegativeVals = (arr) => {
+    newArr = arr.map((val) => (val < 0 ? val = 'Dojo' : val))
+    return newArr;
+}
+console.log(swapStringForArrayNegativeVals([
+    41, -70, 85, 22,
+    -45, 80, -88]));
 
 // //once finished start in the algo book//
