@@ -167,4 +167,25 @@ console.log(swapStringForArrayNegativeVals([
     -45, 80, -88]));
 
 // //From the Algo book//
+const threesFives = () => {
+    let sum = 0;
+    for (let i = 100; i <= 400000; i++) {
+        i % 3 == 0 && i % 5 != 0 ? sum = sum + i : "";
+        i % 5 == 0 && i % 3 != 0 ? sum = sum + i : "";
+        console.log(sum);
+    }
+    return sum;
+}
 
+console.log(threesFives());
+const betterThreesFives = (min,max) => {
+    let sum = 0;
+    for (let i = min; i <= max; i++) {
+        i % 3 == 0 && i % 5 != 0 ? sum = sum + i : "";
+        i % 5 == 0 && i % 3 != 0 ? sum = sum + i : "";
+        console.log(sum);
+    }
+    return sum;
+}
+
+console.log(betterThreesFives(3,15));
