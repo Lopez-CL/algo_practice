@@ -189,3 +189,34 @@ const betterThreesFives = (min,max) => {
 }
 
 console.log(betterThreesFives(3,15));
+
+const coinGenerator = (cents) => {
+    let amount = cents;
+    let quarters = 0;
+    let dimes = 0;
+    let nickles = 0;
+    let pennies = 0;
+    while(amount > 0){
+        if(amount >= 25){
+            quarters++;
+            amount-=25;
+        }
+        else if(amount >= 10){
+            dimes++;
+            amount-=10;
+        }
+        else if(amount >= 5){
+            nickles++;
+            amount-=5;
+        }
+        else if(amount >= 1){
+            pennies++;
+            amount-=1;
+        }
+    };
+    return `To make up ${cents} cents in coins, you need ${quarters} quarters, ${dimes} dimes, ${nickles} nickles, and ${pennies} pennies!`
+}
+
+console.log(coinGenerator(15));
+console.log(coinGenerator(75));
+console.log(coinGenerator(85));
