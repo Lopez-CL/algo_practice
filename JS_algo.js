@@ -220,3 +220,29 @@ const coinGenerator = (cents) => {
 console.log(coinGenerator(15));
 console.log(coinGenerator(75));
 console.log(coinGenerator(85));
+
+const stats2Double = () =>{
+    let rolls = 0
+    let min = 0
+    let max = 0
+    let die1 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
+    let die2 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
+    while(die1 !== die2){
+        if(die1 > die2){
+            max = die1
+            min = die2
+        }
+        else{
+            max = die2
+            min = die1
+        }
+        rolls++;
+        console.log(`roll ${rolls}`)
+        console.log(`max of that roll is ${max}`)
+        console.log(`min of that roll is ${min}`)
+    die1 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
+    die2 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
+    }
+    return console.log(`${die1} and ${die2}! We have a match! after ${rolls + 1} rolls!`)
+}
+stats2Double();
