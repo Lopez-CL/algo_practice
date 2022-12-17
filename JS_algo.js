@@ -246,3 +246,20 @@ const stats2Double = () =>{
     return console.log(`${die1} and ${die2}! We have a match! after ${rolls + 1} rolls!`)
 }
 stats2Double();
+
+const sumToOne = (num) =>{
+    if(num < 10){
+        return console.log(num)
+    }
+    const StNum = String(num).split('')
+    len = StNum.length
+    sum = 0
+    for(let i = 0; i < len; i++){
+        // console.log(+StNum[i])
+        sum += +StNum[i];
+        // console.log(sum)
+    }
+    return sumToOne(sum)
+}
+
+sumToOne(777)
