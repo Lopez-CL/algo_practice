@@ -167,6 +167,8 @@ console.log(swapStringForArrayNegativeVals([
     -45, 80, -88]));
 
 // //From the Algo book//
+// Threes and Fives Create function ​ThreesFives()​ that adds each value from 100 and 4000000 (inclusive) if that value is evenly divisible by 3 or 5 ​but not both​. Display the final sum in the console. Second:​ Change your function to make a ​BetterThreesFives(start,end)​where ​start​and ​end values are customizable. You can think of the above ​ThreesFives()​ function as BetterThreesFives(100,4000000)​.
+
 const threesFives = () => {
     let sum = 0;
     for (let i = 100; i <= 400000; i++) {
@@ -178,7 +180,7 @@ const threesFives = () => {
 }
 
 console.log(threesFives());
-const betterThreesFives = (min,max) => {
+const betterThreesFives = (min, max) => {
     let sum = 0;
     for (let i = min; i <= max; i++) {
         i % 3 == 0 && i % 5 != 0 ? sum = sum + i : "";
@@ -188,30 +190,32 @@ const betterThreesFives = (min,max) => {
     return sum;
 }
 
-console.log(betterThreesFives(3,15));
+console.log(betterThreesFives(3, 15));
 
+
+// Generate Coin Change Implement ​generateCoinChange(cents)​ that accepts a parameter for the number of cents, and computes how to represent that amount with the smallest number of coins. Console.log the result.
 const coinGenerator = (cents) => {
     let amount = cents;
     let quarters = 0;
     let dimes = 0;
     let nickles = 0;
     let pennies = 0;
-    while(amount > 0){
-        if(amount >= 25){
+    while (amount > 0) {
+        if (amount >= 25) {
             quarters++;
-            amount-=25;
+            amount -= 25;
         }
-        else if(amount >= 10){
+        else if (amount >= 10) {
             dimes++;
-            amount-=10;
+            amount -= 10;
         }
-        else if(amount >= 5){
+        else if (amount >= 5) {
             nickles++;
-            amount-=5;
+            amount -= 5;
         }
-        else if(amount >= 1){
+        else if (amount >= 1) {
             pennies++;
-            amount-=1;
+            amount -= 1;
         }
     };
     return `To make up ${cents} cents in coins, you need ${quarters} quarters, ${dimes} dimes, ${nickles} nickles, and ${pennies} pennies!`
@@ -221,18 +225,19 @@ console.log(coinGenerator(15));
 console.log(coinGenerator(75));
 console.log(coinGenerator(85));
 
-const stats2Double = () =>{
+// Statistics to Doubles Implement a ‘die’ that randomly returns an integer between 1 and 6 inclusive. Roll a pair of these dice, tracking the statistics until doubles are rolled. Display the ​number of rolls​, ​min​, ​max​, and ​average​.
+const stats2Double = () => {
     let rolls = 0
     let min = 0
     let max = 0
-    let die1 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
-    let die2 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
-    while(die1 !== die2){
-        if(die1 > die2){
+    let die1 = Math.floor(Math.random() * 6 - 1 + 1) + 1;
+    let die2 = Math.floor(Math.random() * 6 - 1 + 1) + 1;
+    while (die1 !== die2) {
+        if (die1 > die2) {
             max = die1
             min = die2
         }
-        else{
+        else {
             max = die2
             min = die1
         }
@@ -240,26 +245,47 @@ const stats2Double = () =>{
         console.log(`roll ${rolls}`)
         console.log(`max of that roll is ${max}`)
         console.log(`min of that roll is ${min}`)
-    die1 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
-    die2 = Math.floor(Math.random() * 6 - 1 + 1 ) + 1;
+        die1 = Math.floor(Math.random() * 6 - 1 + 1) + 1;
+        die2 = Math.floor(Math.random() * 6 - 1 + 1) + 1;
     }
     return console.log(`${die1} and ${die2}! We have a match! after ${rolls + 1} rolls!`)
 }
 stats2Double();
 
-const sumToOne = (num) =>{
-    if(num < 10){
+// Sum To One Digit Implement a function ​sumToOne(num)​ that, given a number, sums that number’s digits repeatedly until the sum is only one digit. Return that final one digit result.
+const sumToOne = (num) => {
+    if (num < 10) {
         return console.log(num)
     }
     const StNum = String(num).split('')
-    len = StNum.length
     sum = 0
-    for(let i = 0; i < len; i++){
+    for (let i = 0; i < StNum.length; i++) {
         // console.log(+StNum[i])
         sum += +StNum[i];
         // console.log(sum)
     }
     return sumToOne(sum)
-}
 
+}
 sumToOne(777)
+// Fibonacci Implement the Fibonacci function, a famous mathematical equation that generates a numerical sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0 and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which Fibonacci number. Examples: ​fibonacci(2)​ = 1, ​fibonacci(3)​ = 2, ​fibonacci(4)​ = 3, ​fibonacci(5)​ = 5, etc.
+
+const fibonacci = (num) => {
+    if (num === 0) {
+        return 0
+    }
+    if (num === 1) {
+        return 1
+    }
+    let intOne = 0
+    let intTwo = 1
+    let sum = 0
+    for (let i = 1; i < num; i++) {
+        sum = intOne + intTwo
+        intOne = intTwo
+        intTwo = sum
+    }
+    return sum
+}
+console.log(fibonacci(5));
+
