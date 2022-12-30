@@ -289,3 +289,13 @@ const fibonacci = (num) => {
 }
 console.log(fibonacci(5));
 
+// Last Digit of A to the B Modern computers can handle very large numbers, but this ability has limits. If a number is repeatedly multiplied by itself, it eventually exceeds the computer’s ability to accurately represent it. (Side note: the number of times it is multiplied by itself is called the ​exponent​.) For an optional end-of-chapter challenge, determine the smallest (least significant) digit of a number that is potentially very, very large. You may find that you must do this without computing the actual (unimaginably large) number. Implement a function that accepts two non-negative integers as arguments. Function ​lastDigitAtoB(a, b)​ should return the last digit of the first number (a) raised to an exponent of the second number (b).
+
+const lastDigitAtoB = (a,b) => {
+    let getLastDigit = String(a**b).split('')
+    // console.log(getLastDigit)
+    // console.log(getLastDigit[getLastDigit.length - 1])
+    return getLastDigit[getLastDigit.length - 1]
+    
+}
+console.log(lastDigitAtoB(12,5))
